@@ -5,6 +5,15 @@
 </head>
 <body>
     <h1>Welcome to Our Shop</h1>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li style="color: green;">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
     {% if products %}
         {% for product in products %}
             <div style="border:1px solid #ccc; padding:10px; margin:10px;">
@@ -13,8 +22,11 @@
                 <p>{{ product.description }}</p>
                 <p>Price: ${{ product.price }}</p>
                 {% if product.image %}
-                    <img src="{{ product.image.url }}" width="150">
+                    <img src="{{ product.image.url }}" width="150"><br>
                 {% endif %}
+                <a href="{% url 'place_order' product.id %}">
+                    <button>Order Now</button>
+                </a>
             </div>
         {% endfor %}
     {% else %}
@@ -22,3 +34,4 @@
     {% endif %}
 </body>
 </html>
+

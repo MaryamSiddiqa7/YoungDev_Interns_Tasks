@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Order</title>
+    <style>
+        .success-message {
+            color: green;
+            margin-bottom: 15px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const successMsg = document.querySelector(".success-message");
+            const orderForm = document.getElementById("order-form");
+
+            if (successMsg) {
+                setTimeout(() => {
+                    // Hide message and form
+                    if (successMsg) successMsg.style.display = "none";
+                    if (orderForm) orderForm.style.display = "none";
+
+                    // Redirect to home after hiding
+                    window.location.href = "{% url 'home' %}";
+                }, 5000); // Wait for 5 seconds
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Place Order for {{ product.name }}</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="success-message">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
+    {% if not order_placed %}
+        <form method="post" id="order-form">
+            {% csrf_token %}
+            <label for="customer_name">Name:</label><br>
+            <input type="text" name="customer_name" id="customer_name" required><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea name="address" id="address" required></textarea><br><br>
+
+            <button type="submit">Place Order</button>
+        </form>
+    {% endif %}
+</body>
+</html>
