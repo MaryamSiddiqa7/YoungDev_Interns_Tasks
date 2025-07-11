@@ -14,9 +14,23 @@ This repository showcases my work on various tasks. To run each file, please fol
 2. Run this file to open a window displaying the sine and cosine graph.
 
 ## E-Commerce Website
+#For Intermediate task 1
 1. Install Django: `pip install django`
 2. Navigate to the project directory and run the development server: python manage.py runserver
-3. Open a web browser and go to: http://localhost:8000/ → Client side
+3. Open a web browser and go to:
+http://localhost:8000/ → Client side,
 http://localhost:8000/admin → Admin side (login with superuser)
-4. To create a superuser: run `python manage.py createsuperuser` in the terminal and set your username,email & password. 
+Use the following login credentials for admin access:
+Username: Maryam
+Password: ecommerce123 (Or create your own superuser)
+5. To create a superuser: run `python manage.py createsuperuser` in the terminal and follow the prompts.
+
+#For Intermediate task 2
+This task adds two major features:
+Admin can perform CRUD operations on products & Admin can assign roles
+**Note**: Only the db.sqlite3 file has been updated in this task.
+To view the new functionality:
+1. Use the existing project files from Task 1
+2. Replace the old db.sqlite3 with the updated one provided for Task 2
+3. Run the project as before using python manage.py runserver.
 
