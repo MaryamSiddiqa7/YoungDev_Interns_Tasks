@@ -12,3 +12,11 @@ This repository showcases my work on various tasks. To run each file, please fol
 ## Sine and Cosine Graph
 1. Install the required libraries: pip install matplotlib numpy
 2. Run this file to open a window displaying the sine and cosine graph.
+
+## E-Commerce Website
+1. Install Django: `pip install django`
+2. Navigate to the project directory and run the development server: python manage.py runserver
+3. Open a web browser and go to: http://localhost:8000/ → Client side
+http://localhost:8000/admin → Admin side (login with superuser)
+4. To create a superuser: run `python manage.py createsuperuser` in the terminal and set your username,email & password. 
+
