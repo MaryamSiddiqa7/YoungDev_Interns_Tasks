@@ -34,3 +34,19 @@ To view the new functionality:
 2. Replace the old db.sqlite3 with the updated one provided for Task 2
 3. Run the project as before using python manage.py runserver.
 
+#For Intermediate task 3
+This task adds a new feature to the E-Commerce website:
+Admin can now accept payment of purchases placed by customers
+**Changes**:
+. The `Order` model has been updated to include an `is_paid` boolean field
+. Admin can view all orders from the admin panel and mark them as paid
+. Customer receives a success message on placing an order
+. The order form automatically hides and redirects after successful submission
+To view the new functionality:
+1. Use the project folder (`ecommerce_project`) 
+2. Run the server with: `python manage.py runserver`
+3. Go to:
+   http://localhost:8000/ → Client side
+   http://localhost:8000/admin → Admin side (login with superuser)
+
+
