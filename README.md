@@ -49,4 +49,18 @@ To view the new functionality:
    http://localhost:8000/ → Client side
    http://localhost:8000/admin → Admin side (login with superuser)
 
+## Doctor AI Website
+#For Expert task 1
+1. Install Django: `pip install django`
+2. Navigate to the project directory and run the development server: python manage.py runserver
+3. Open a web browser and go to:
+http://localhost:8000/ → For Visitors
+http://localhost:8000/client → For Patients
+http://localhost:8000/admin → For Admin(login with superuser)
+Use the following login credentials for admin access:
+Username: User1
+Password: doctorai12 (Or create your own superuser)
+5. To create a superuser: run `python manage.py createsuperuser` in the terminal and follow the prompts.
+   
+
 
