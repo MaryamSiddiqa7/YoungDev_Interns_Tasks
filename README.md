@@ -67,7 +67,21 @@ This task adds **two new major features** to the Doctor AI website:
 1. Chatbot Integration: A chatbot that responds to common symptoms with suggestions and relevant medicines.
 2. Dynamic Health Tips: A new health tip is displayed each day to both visitors and patients, rotating automatically.
 To view the new functionality:
-follow the same setup steps as Task 1 mentioned above.
-   
+Follow the same setup steps as Task 1 mentioned above.
+
+#For Expert task 3
+This task adds doctor registration and approval system to the Doctor AI website.
+New Features:
+1. Doctor Registration: Doctors can now register via a button on the homepage by filling out a profile form.
+2. Admin Approval System: Doctor profiles are saved as pending. Admin can approve them via the admin panel.
+3. Visibility Control: Only approved doctors are shown in the “Explore/Find Doctors” section for both visitors and clients.
+To view the new functionality:
+Follow the same setup steps as Task 1 mentioned above.
+
+
+
+
+
+
 
 
