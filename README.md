@@ -27,7 +27,7 @@ Password: ecommerce123 (Or create your own superuser)
 
 #For Intermediate task 2
 This task adds two major features:
-Admin can perform CRUD operations on products & Admin can assign roles
+Admin can perform CRUD operations on products & Admin can assign roles.
 **Note**: Only the db.sqlite3 file has been updated in this task.
 To view the new functionality:
 1. Use the existing project files from Task 1
@@ -36,7 +36,7 @@ To view the new functionality:
 
 #For Intermediate task 3
 This task adds a new feature to the E-Commerce website:
-Admin can now accept payment of purchases placed by customers
+Admin can now accept payment of purchases placed by customers.
 **Changes**:
 . The `Order` model has been updated to include an `is_paid` boolean field
 . Admin can view all orders from the admin panel and mark them as paid
@@ -61,6 +61,13 @@ Use the following login credentials for admin access:
 Username: User1
 Password: doctorai12 (Or create your own superuser)
 5. To create a superuser: run `python manage.py createsuperuser` in the terminal and follow the prompts.
+
+#For Expert task 2
+This task adds **two new major features** to the Doctor AI website:
+1. Chatbot Integration: A chatbot that responds to common symptoms with suggestions and relevant medicines.
+2. Dynamic Health Tips: A new health tip is displayed each day to both visitors and patients, rotating automatically.
+To view the new functionality:
+follow the same setup steps as Task 1 mentioned above.
    
 
 
