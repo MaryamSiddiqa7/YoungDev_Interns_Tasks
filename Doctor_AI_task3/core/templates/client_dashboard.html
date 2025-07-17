@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Dashboard | Doctor AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+
+        .navbar {
+            background-color: #0b5394;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dashboard {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .dashboard h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .cards {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 1.5rem 2rem;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #0b5394;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0b5394;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Doctor AI</h1>
+        <a href="/">Home</a>
+    </div>
+
+    <div class="dashboard">
+        <h2>Welcome, Patient!</h2>
+        <p>Your personalized healthcare assistant is here.</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Find Doctors</h3>
+                <p>Search and connect with the best doctors across various specializations.</p>
+                <a href="/doctors/">Find Now →</a>
+            </div>
+
+            <div class="card">
+                <h3>Medicine Chatbot</h3>
+                <p>Get instant medicine suggestions based on symptoms.</p>
+                <a href="/chatbot/">Chat Now →</a>
+            </div>
+
+            <div class="card">
+                <h3>Upcoming Appointments</h3>
+                <p>You don't have any upcoming appointments scheduled for this week.</p>
+            </div>
+
+            <div class="card">
+                <h3>Health Tips</h3>
+                <p>{{ health_tip }}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

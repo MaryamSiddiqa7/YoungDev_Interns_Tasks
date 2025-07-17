@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Doctor AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef3f9;
+        }
+
+        .header {
+            background-color: #0b5394;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .content {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 260px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #0b5394;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0b5394;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .doctor-register {
+            text-align: center;
+            margin: 40px auto;
+        }
+
+        .doctor-register a {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .doctor-register a:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to Doctor AI</h1>
+        <p>Your smart assistant to connect with the best doctors.</p>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h3>Find Doctors</h3>
+            <p>Browse top-rated doctors and book consultations easily.</p>
+            <a href="/doctors/">Explore Doctors →</a>
+        </div>
+
+        <div class="card">
+            <h3>Health Tip of the Day</h3>
+            <p>{{ health_tip }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Medicine Chatbot</h3>
+            <p>Ask about common symptoms and get medicine suggestions instantly.</p>
+            <a href="/chatbot/">Try Chatbot →</a>
+        </div>
+    </div>
+
+    <!-- Doctor Registration Button -->
+    <div class="doctor-register">
+        <p>Are you a doctor looking to join our platform?</p>
+        <a href="{% url 'register_doctor' %}">Register as Doctor</a>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Doctor AI. All rights reserved.
+    </div>
+
+</body>
+</html>

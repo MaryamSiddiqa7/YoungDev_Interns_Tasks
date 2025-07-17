@@ -1,0 +1,45 @@
+<!-- templates/core/doctors.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meet Our Doctors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .doctor-card {
+            background: white;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .specialization {
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h2>Meet Our Doctors</h2>
+
+    {% if doctors %}
+        {% for doctor in doctors %}
+            <div class="doctor-card">
+                <p><strong>Name:</strong> {{ doctor.name }}</p>
+                <p><strong>Email:</strong> {{ doctor.email }}</p>
+                <p><strong>Specialization:</strong> <span class="specialization">{{ doctor.specialization }}</span></p>
+                <p><strong>Experience:</strong> {{ doctor.experience }} years</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p style="text-align:center;">No approved doctors found.</p>
+    {% endif %}
+</body>
+</html>
